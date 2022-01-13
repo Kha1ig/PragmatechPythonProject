@@ -1,4 +1,4 @@
-### 1-ci tapşırıq: 3 input daxil edin və daxil edilən ədələrin fərqini tapın
+### 1-ci tapşırıq: 3 input daxil edin və daxil edilən ədələrin fərqini tapın.
 
 eded1 = float(input('1-ci ededi daxil edin: '))
 eded2 = float(input('2-ci ededi daxil edin: '))
@@ -7,7 +7,7 @@ eded3 = float(input('3-cu ededi daxil edin: '))
 netice = eded1 - eded2 - eded3 
 print(f'netice:{netice}')
 
-### 2-ci tapşırıq: word = 'Python'. Verilen stringin uzerinde azı 5 dənə string method tətbiq edin
+### 2-ci tapşırıq: word = 'Python'. Verilen stringin uzerinde azı 5 dənə string method tətbiq edin.
 
 word = 'Python'
 
@@ -31,7 +31,7 @@ reqem = pow(float(input('bir reqem daxil edin: ')), 3)
 
 print(reqem)
 
-### 4-cü tapşırıq: inputdan 3 ədəd götürün və o ədələrin kvadratını bir listə əlavə edin
+### 4-cü tapşırıq: inputdan 3 ədəd götürün və o ədələrin kvadratını bir listə əlavə edin.
 
 import math
 eded1 = pow(float(input('1-ci ededi daxil edin: ')), 2)
@@ -47,14 +47,14 @@ ededlerinkv.extend(netice)
 
 print(ededlerinkv)
 
-### 5-ci tapşırıq: Təsadüfi rəqəmlərdən ibarət olan listin rəqəmlərini kiçikdən böyüyə düzün
+### 5-ci tapşırıq: Təsadüfi rəqəmlərdən ibarət olan listin rəqəmlərini kiçikdən böyüyə düzün.
 
 mylist=[ 7, 3, 45, 12, 87, 78, 99, 1, 11 ]
 
 mylist.sort()
 print(mylist)
 
-### 6-cı tapşırıq: Bir mesajı dəyişəndə saxlayın və sonra mesajı çapa verin
+### 6-cı tapşırıq: Bir mesajı dəyişəndə saxlayın və sonra mesajı çapa verin.
 
 text = input('metn daxil edin: ')
 print(text)
@@ -72,11 +72,11 @@ tam_ad ='Salam,', ad.capitalize(), soyad.capitalize()
 x = " ".join(tam_ad)
 print( x )
 
-### 8-ci tapşırıq: sep parametrindən istifadə edərək 4 müxtəlif şəhər adını * işarəsi ilə ayırın
+### 8-ci tapşırıq: sep parametrindən istifadə edərək 4 müxtəlif şəhər adını * işarəsi ilə ayırın.
 
 print('Braziliya', 'Turkiye', 'London', sep=" *** ")
 
-### 9-cu tapşırıq: “ Macarıstan” sözünü tərsinə çapa verin
+### 9-cu tapşırıq: “ Macarıstan” sözünü tərsinə çapa verin.
  
 text = 'Macarıstan' [:: -1]
 print(text)
