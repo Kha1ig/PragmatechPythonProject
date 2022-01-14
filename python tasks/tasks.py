@@ -176,14 +176,7 @@ print(number)
 # my_stringin ədədə bərabər olan hissəsin ilə özündən sonra gələn ən kiçik tam ədədə olan qüvvətini tapın
 
 my_string = 'f456.89ts'
-str_list = my_string.split()
-print(str_list)
-
-import re
-match = re.match(r"([a-z]+)([0-9]+)", 'f456.89ts', re.I)
-if match:
-   items = match.groups()
-print(items)
+print(my_string.isdigit())
 
 
 ### 19-cu tapşırıq: 1 və 8 arasında random bir ədəd götürsün proqram, 
