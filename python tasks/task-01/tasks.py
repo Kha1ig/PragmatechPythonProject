@@ -85,7 +85,7 @@ print(text)
 # Bir sətir koddan istifadə edərək aşağıdakı yazını göründüyü kimi çapa verin. 
 # Languages: Python C JavaScript
 
-print('Languages: Python C Javascript')
+print('Languages:\nPython\nC\nJavascript')
 
 ### 11-ci tapşırıq: Escape characterlərdən istifadə edərək ekrana bir cümlə çap edin.
 
@@ -176,6 +176,7 @@ print(number)
 # my_stringin ədədə bərabər olan hissəsin ilə özündən sonra gələn ən kiçik tam ədədə olan qüvvətini tapın
 
 my_string = 'f456.89ts'
+
 print(my_string.isdigit())
 
 
