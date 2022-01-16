@@ -1,10 +1,10 @@
-### Qeydiyyat formu düzəldin. İstifadəçi adını daxil etsin. A
-# dın uzunlu 3-dən kiçik 11-dən böyük ola bilməz.
+### Qeydiyyat formu düzəldin. İstifadəçi adını daxil etsin. 
+# Adın uzunlu 3-dən kiçik 11-dən böyük ola bilməz.
 # Əgər adını düzgün daxil edərsə, soyadının daxil etməsini istəyin. 
 # Soyad 5 hərfdən kiçik, 15 hərfdən uzun olmasın. 
 # Əgər soyad düzgün daxil edilsə, Daha sonra doğulduğu ili daxil etsin. 
 # Doğum ilinin uzunluğu 4 simvoldan ibarət olmalıdır. 
-# Sonra email daxil etməsini tələb edin. 
+# Sonra email daxil etməsini tələb edin.
 # Emailin uzunluğu 10 hərifdən qısa 22 hərfdən uzzun olmasın, 
 # tərkibində @gmail.com olsun və bu hissə daxil etdiyi emailin sonunda olsun. 
 # Ardınca parol axil etsin. Parol 6-13 simvol aralığında olmalıdır. 
@@ -36,13 +36,19 @@ if  3 < len(ad) < 11:
                         if tesdiq_parolu != parol:
                             tesdiq_parolu = input('tesdiq parolu duzgun deyil: ')
 
-cavab = input('Qeydiyyat tamamlandi ve qeydiyyatın detallarına baxmaq istəyirsinizmi  hE ya yox: ')
+cavab = input('Qeydiyyat tamamlandi ve qeydiyyatın detallarına baxmaq istəyirsinizmi  he ya yox: ')
 print(cavab)
 
 if cavab == ('he'):
-    print(f'''ad: {ad}, soyad: {soyad}, dogum_ili: {dogum_ili}, mail: {mail}, parol: {parol}''' )
+    print(f'''
+        ad: {ad} 
+        soyad: {soyad}
+        dogum_ili: {dogum_ili} 
+        mail: {mail} 
+        parol: {parol}''' )
+    
 else:
-    print('___ugurlar!___')
+    print(f'''{ad} {soyad}, _ugurlar!_''')
 
             
             
