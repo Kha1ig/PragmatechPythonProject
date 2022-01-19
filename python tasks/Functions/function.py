@@ -55,8 +55,6 @@ def returnday():
             print('7 is Sunday')
         return
       
-    
-
 returnday()
 
 ### 5. - Make a list of five or more usernames, including the name 'admin' . 
@@ -83,4 +81,20 @@ def users():
 users()
 
 ### 6. - len() funksiyasini ozunuz yazmaga calishin.
+
+### 7. - funksiya yazin ededlerden ibaret list qebul etsin ve 
+# eger listin birinci ve sonuncu elementleri beraberdise return True qaytarsin. 
+# Mes: [1,2,3,1] bu halda True qaytaracag
+
+
+def mylist(list):
+    equal = list[0]
+    for a in list:
+        if a == equal:
+            return True
+        else:
+            return False
+            break
+          
+print(mylist([1, 2, 3, 1]))
 
