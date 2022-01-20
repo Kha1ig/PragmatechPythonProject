@@ -18,6 +18,7 @@ print(cem((8, 2, 3, 0, 7)))
 ### 3. - Write a Python function to multiply all the numbers in a list.
 #Sample List : (8, 2, 3, -1, 7) Expected Output : -336
 import math
+from multiprocessing.sharedctypes import Value
 
 def vurma(mylist):
     x = 1
@@ -82,6 +83,17 @@ users()
 
 ### 6. - len() funksiyasini ozunuz yazmaga calishin.
 
+username = []
+
+while len(username) < 3:
+    user = input('username daxil edin 4-den boyuk 10-dan kicik: ')
+    if 3 < len(user) < 10:
+        print(f'''username {user} duzgundur''')
+        username.append(user)
+    else:
+        print('username 4- 10 simvol arasi daxil edin ')
+print(username)
+
 ### 7. - funksiya yazin ededlerden ibaret list qebul etsin ve 
 # eger listin birinci ve sonuncu elementleri beraberdise return True qaytarsin. 
 # Mes: [1,2,3,1] bu halda True qaytaracag
@@ -97,4 +109,24 @@ def mylist(list):
             break
           
 print(mylist([1, 2, 3, 1]))
+
+### 8. - Funksiya yazin parameter olaraq list,ve dict qebul etsin. 
+# Funksiya yoxlamalidi listin icindeki reqemler dictioneryde yoxdusa onlari silmelidi ve  sonda listi return etmelidi. 
+# (mes : [27,22,34,44],{"tural": 27,"soltan": 22} funksiyaya gonderirsen o sene [27,22] qaytarir.
+mylist = [27,22,34,44]
+dic = {
+    "tural": 27,
+    "soltan": 22,
+    "zaur": 12,
+    "Inci": 23
+    }
+
+def list_dic(mylist,dic):
+    yenilist = []
+    for i in mylist:
+        for values in dic:
+            if i == dic[values]:
+                yenilist.append(i)
+    return yenilist
+print(list_dic(mylist,dic))
 
