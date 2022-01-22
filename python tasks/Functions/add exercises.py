@@ -27,8 +27,11 @@ number = int(input('number add: '))
 print(numberfind(number))
 
 ### Write a Python program that accepts a hyphen-separated sequence of words as input and prints the words in a hyphen-separated sequence after sorting them alphabetica
-
 str_txt = input('metn daxil edin: ')
-x = str_txt.split('-')
-x.sort()
-print('-'.join(x))
+
+def txt_split():
+    x = str_txt.split('-')
+    x.sort()
+    return '-'.join(x)
+
+print(txt_split())
