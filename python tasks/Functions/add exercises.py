@@ -35,3 +35,25 @@ def txt_split():
     return '-'.join(x)
 
 print(txt_split())
+
+### Write a Python program to make a chain of function decorators (bold, italic, underline etc.) in Python
+
+def bold(txt):
+    def wrapped():
+        return "<b>" + txt() + "</b>"
+    return wrapped
+def italic(txt):
+    def wrapped():
+        return "<i>" + txt() + "</i>"
+    return wrapped
+def underline(txt):
+    def wrapped():
+        return "<u>" + txt() + "</u>"
+    return wrapped
+@bold
+@italic
+@underline
+
+def str():
+    return "my world"
+print(str())
