@@ -30,11 +30,13 @@ if  3 < len(ad) < 11:
                 b = '@gmail.com'
                 mail = e_mail.__add__(b)
                 parol = input('parol daxil edin: ')
-                if 6 < len(parol) <= 13:
-                    tesdiq_parolu = input('parolu tesdiqleyin: ')
-                    while tesdiq_parolu != parol:
-                        if tesdiq_parolu != parol:
-                            tesdiq_parolu = input('tesdiq parolu duzgun deyil: ')
+                while 6 > len(parol) <= 13:
+                    if 6 > len(parol) <= 13:
+                        parol = input('parol 6 - 13 simvol arasi daxil edin: ')
+                tesdiq_parolu = input('parolu tesdiqleyin: ')
+                while tesdiq_parolu != parol:
+                    if tesdiq_parolu != parol:
+                        tesdiq_parolu = input('tesdiq parolu duzgun deyil, yendien daxil edin: ')
 
 cavab = input('Qeydiyyat tamamlandi ve qeydiyyatın detallarına baxmaq istəyirsinizmi  he ya yox: ')
 print(cavab)
