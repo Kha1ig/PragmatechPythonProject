@@ -120,13 +120,13 @@ dic = {
     "zaur": 12,
     "Inci": 23
     }
-
-def list_dic(mylist,dic):
+mydictionary = iter(dic)
+mylistim = iter(mylist)
+def list_dic(mylist):
     yenilist = []
     for i in mylist:
-        for values in dic:
-            if i == dic[values]:
-                yenilist.append(i)
+        if i == mydictionary:
+            yenilist.append(i)
     return yenilist
-print(list_dic(mylist,dic))
+print(list_dic(mylist))
 

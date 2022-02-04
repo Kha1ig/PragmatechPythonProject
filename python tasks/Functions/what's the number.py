@@ -5,9 +5,9 @@ print('''                                                ___Nömrəni tap oynuna
 oyuncu1 = input('zəhmət olmasa 1-ci oyunçu adını daxil edin:')
 oyuncu2 = input('zəhmət olmasa 2-ci oyunçu adını daxil edin: ')
 
-y =1
-while y<5:
-    y+=1    
+y = 1
+while y < 5:
+    y += 1    
     a = int(input(f'''{oyuncu1} 1-10 arası rəqəm daxil edin: '''))
     b = int(input(f'''{oyuncu2} 1-10 arası rəqəm daxil edin: '''))
     def randomnumber():
@@ -26,5 +26,5 @@ while y<5:
         if a != x and b !=x:
             print('                             hec bir oyuncu rəqəmi tapa bilmədi novbəti dəfə şansınızı yoxlayın bu bir oyun zövq alın')
             print(f'''                                            Hadi {oyuncu1} ve {oyuncu2} oyun 5 raunddan ibarətdir ''')
-        return
+        return oyuncu1 (5 - y)
     randomnumber()
