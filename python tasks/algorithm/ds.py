@@ -1,3 +1,0 @@
-x = 'python'
-
-print(x)
