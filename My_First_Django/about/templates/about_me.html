@@ -4,21 +4,20 @@
 {% block title %} about_me  {% endblock %}
 
 {% block content %}
+<h1>_Hello Django_</h1>
     {% for about in abouts %}
-
+    
     <a href="{% url 'about:about_detail' about %}">{{about.title}}</a>
         
-
-    {% endfor %}
-
-
-    <h1>_Hello Django_</h1>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{% static 'img/download.jpg' %}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    <div class="card flex" style="width: 20rem; float: left; margin-left: 5em;">
+      <img class="card-img-top" src="{{about.image.url}}" alt="Card image cap" width="250px" height="180px">
+      <div class="card-body">
+        <h5 class="card-title">{{about.title}}</h5>
+        <p class="card-text">{{about.card_text}}</p>
+        <a href="{% url 'about:about_detail' about %}" class="btn btn-primary">Go somewhere</a>
       </div>
+    </div>
+    
+    
+    {% endfor %}
 {% endblock %}

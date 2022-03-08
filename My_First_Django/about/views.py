@@ -1,28 +1,15 @@
+import imp
 from multiprocessing import context
 from django.shortcuts import render
+from about.models import Post
 
 # Create your views here.
 
 def about(request):
-    abouts = [
-
-             {
-                'about1': {
-                    'name': 'Ali',
-                    'surname': 'Aliyev',
-                    'age':  21
-                },
-                'about2': {
-                    'name': 'Cemil',
-                    'surname': 'Huseynov',
-                    'age':  22
-                }
-
-            }
-        ]
+    abouts = Post.objects.all()
     
     context = {
-        'abouts': abouts[0]
+        'abouts': abouts
     }
 
 
@@ -30,23 +17,8 @@ def about(request):
     
 def about_detail(request, about):
 
-    abouts = [
+    abouts = Post.objects.all()
 
-             {
-                'about1': {
-                    'name': 'Ali',
-                    'surname': 'Aliyev',
-                    'age':  21
-                },
-                'about2': {
-                    'name': 'Cemil',
-                    'surname': 'Huseynov',
-                    'age':  22
-                }
-
-            }
-        ]
-
-    about = abouts[0][about]
+    about = abouts
 
     return render (request, 'about-detail.html', {'about': about})

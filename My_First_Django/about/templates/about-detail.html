@@ -3,11 +3,11 @@
 {% block title %} about details  {% endblock %}
 
 {% block content %} 
-
+{% block abouts %}
 <a href="{% url 'about:about' %}">About</a>
-<p>name: {{about.name}}</p>
-<p>surname: {{about.surname}}</p>
-<p>age: {{about.age}}</p>
+<p><img src="{{about.image.url}}" alt=""></p>
+<p>Title: {{about.title}}</p>
+<p>Card_text: {{about.card_text}}</p>
 
-
+{% endblock %}
 {% endblock %}
