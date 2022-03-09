@@ -15,10 +15,8 @@ def about(request):
 
     return render(request, 'about_me.html', context = context)
     
-def about_detail(request, about):
+def about_detail(request,pk):
 
-    abouts = Post.objects.all()
-
-    about = abouts
+    about = Post.objects.get(pk=pk)
 
     return render (request, 'about-detail.html', {'about': about})

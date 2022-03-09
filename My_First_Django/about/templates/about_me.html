@@ -7,14 +7,14 @@
 <h1>_Hello Django_</h1>
     {% for about in abouts %}
     
-    <a href="{% url 'about:about_detail' about %}">{{about.title}}</a>
+    <a href="{% url 'about:about_detail' about.pk %}">{{about.title}}</a>
         
     <div class="card flex" style="width: 20rem; float: left; margin-left: 5em;">
       <img class="card-img-top" src="{{about.image.url}}" alt="Card image cap" width="250px" height="180px">
       <div class="card-body">
         <h5 class="card-title">{{about.title}}</h5>
         <p class="card-text">{{about.card_text}}</p>
-        <a href="{% url 'about:about_detail' about %}" class="btn btn-primary">Go somewhere</a>
+        <a href="{% url 'about:about_detail' about.pk %}" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
     

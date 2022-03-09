@@ -5,7 +5,7 @@
 {% block content %} 
 {% block abouts %}
 <a href="{% url 'about:about' %}">About</a>
-<p><img src="{{about.image.url}}" alt=""></p>
+<p>Image: <img src="{{about.image.url}}" alt="" width="250px" height="180px"></p>
 <p>Title: {{about.title}}</p>
 <p>Card_text: {{about.card_text}}</p>
 

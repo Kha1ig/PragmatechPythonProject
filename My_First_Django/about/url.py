@@ -5,6 +5,6 @@ app_name = 'about'
 
 urlpatterns = [
     path('', about, name='about'),
-    path('<str:about>', about_detail, name='about_detail'),
+    path('<int:pk>', about_detail, name='about_detail'),
 
 ]
