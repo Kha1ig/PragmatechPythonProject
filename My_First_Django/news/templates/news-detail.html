@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} News-detail {% endblock %}
+
+{% block content %}
+{% block news %}
+<a href="{% url 'news:news' %}">Go to News</a>
+
+<p>Post_name: {{news.post_name}}</p>
+<p>post_date: {{news.date_time}}</p>
+<p>post_image: <img src="{{news.image.url}}" alt=""> </p>
+<p>post_text: {{news.card_text}} </p>
+{% endblock %}
+{% endblock %}

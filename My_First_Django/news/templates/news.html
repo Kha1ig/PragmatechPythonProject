@@ -2,10 +2,29 @@
 {% load static %}
 
 {% block title %}   News    {% endblock %}
-    
 
 {% block content %}    
     <h1>News</h1>    
     <img src="{% static 'img/download.jpg' %}" alt="" srcset="">
+
+    
+    <div class="row mb-2">
+{% for new_news in news %}
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">{{new_news.post_name}}</h3>
+                    <div class="mb-1 text-muted">{{new_news.date_time}}</div>
+                    <p class="card-text mb-auto">{{new_news.card_text}}</p>
+                    <a href="{% url 'news:news-detail' new_news.pk %}" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="{{new_news.image.url}}" alt="">
+                </div>
+            </div>
+            
+        </div>
+{% endfor %}
+    </div>
 
 {% endblock %}
