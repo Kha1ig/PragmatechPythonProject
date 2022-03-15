@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'contact',
     'resume',
+    'phone',
 ]
 
 MIDDLEWARE = [
