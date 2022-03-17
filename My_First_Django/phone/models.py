@@ -1,8 +1,4 @@
-from distutils.command.upload import upload
-from distutils.text_file import TextFile
-from operator import mod
 from django.db import models
-from django.forms import CharField, IntegerField
 
 # Create your models here.
 
@@ -25,9 +21,20 @@ class phone(models.Model):
     ram = models.IntegerField(default=4)
     storage = models.IntegerField(default=128)
     image = models.ImageField(upload_to = 'phone-images/')
+    phone_id = models.OneToOneField('phoneimei', on_delete=models.CASCADE, default=0)
 
     # migrations
     date = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return f'{self.name} - by - {self.brand}'
+
+class phoneimei(models.Model):
+    imei = models.CharField(max_length=200, blank = False, null = False, default=0)
+    reseption_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.imei
+    
+
+
